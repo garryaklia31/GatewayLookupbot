@@ -20,7 +20,7 @@ client_token = '8063730137:AAGKMfx-Kk7JU6jU_6R43_3E15YojwD3zTs'
 
 #coded by @AnukarOP 
 
-admin_ids = [ADMIN_ID_1, ADMIN_ID_2, ADMIN_ID_3]  # Example admin IDs
+admin_ids = [1718738592, ADMIN_ID_2, ADMIN_ID_3]  # Example admin IDs
 
 def is_user_admin(user_id):
     return user_id in admin_ids
@@ -181,7 +181,7 @@ async def handle_create(event):
             num_codes = int(num_codes)
             codes = [generate_redeem_code() for _ in range(num_codes)]
             generated_codes.extend(codes)
-            code_message = ' ┏━━━━━━━⍟\n┃ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗥𝗲𝗱𝗲𝗲𝗺 𝗰𝗼𝗱𝗲𝘀 ✅\n┗━━━━━━━━━━━⊛\n\n⊙ ' + '\n⊙ '.join(f'`{code}`' for code in codes) + ' \n\n━━━━━━━━━━━━━━━━\nPlease note that `02` credits each. You can redeem them using the command \n`/redeem` (@GatewayLookupbot)'
+            code_message = ' ┏━━━━━━━⍟\n┃ 𝗛𝗲𝗿𝗲 𝗶𝘀 𝘆𝗼𝘂𝗿 𝗥𝗲𝗱𝗲𝗲𝗺 𝗰𝗼𝗱𝗲𝘀 ✅\n┗━━━━━━━━━━━⊛\n\n⊙ ' + '\n⊙ '.join(f'`{code}`' for code in codes) + ' \n\n━━━━━━━━━━━━━━━━\nPlease note that `02` credits each. You can redeem them using the command \n`/redeem` (@gatewaychkrBot)'
             await event.respond(code_message, parse_mode='Markdown')
         except (ValueError, TypeError):
             pass
@@ -215,7 +215,7 @@ __𝐔𝐬𝐞𝐫 𝐃𝐞𝐭𝐚𝐢𝐥𝐬__ :
 ⊛ **Username** : @{event.sender.username}
 ⊛ **Userid** : `{event.sender.id}`
 ⊛ **Code** : `{redeem_code}`
-⊛ **Bot** : @GatewayLookupbot""")
+⊛ **Bot** : @gatewaychkrBot""")
         await client.send_message(LOG_GROUP_ID,msg)
         
         
@@ -403,14 +403,14 @@ async def cmd_start(event):
     """
     edit = await edit.edit(textc)
     time.sleep(1.5)
-    url = 'https://t.me/BlackHeadsOP'
+    url = 'https://t.me/qwedOP'
     buttons = [
         [Button.inline('Cmds', b'cmd'),
          Button.url('Channel', url)]
     ]
     textd = f"""
 𝗛𝗲𝘆 {event.sender.first_name}
-𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 『ᏰᏂ』 ⛈
+𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 『qwed』 ⛈
 
 ⚠️ 𝗗𝗼 /register 𝗕𝗲𝗳𝗼𝗿𝗲 𝗨𝘀𝗶𝗻𝗴 𝗺𝗲.
 """
@@ -445,14 +445,14 @@ async def cmd_callback(event):
 @client.on(events.CallbackQuery(data=b'back'))
 async def back_callback(event):
     try:
-        url = 'https://t.me/BlackHeadsOP'
+        url = 'https://t.me/qwedOP'
         buttons = [
             [Button.inline('Cmds', b'cmd'),
              Button.url('Channel', url)]
         ]
         textd = f"""
 𝗛𝗲𝘆 {event.sender.first_name}
-𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 『ᏰᏂ』 ⛈
+𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 『qwed』 ⛈
 
 ⚠️ 𝗗𝗼 /register 𝗕𝗲𝗳𝗼𝗿𝗲 𝗨𝘀𝗶𝗻𝗴 𝗺𝗲.
 """
@@ -465,7 +465,7 @@ async def back_callback(event):
 @client.on(events.NewMessage(pattern='/about'))
 async def cmd_start(event):
     try:
-        await event.respond("ℹ 𝗔𝗯𝗼𝘂𝘁 : \n**This bot is Maintained and Developed by Team BlackHeads** 👑\n**Use it only for Educational Purposes**, We are not responsible of any illegal things Performed by you.\n     ❛ ━━━━･━━━━･━━━━ ❜")
+        await event.respond("ℹ 𝗔𝗯𝗼𝘂𝘁 : \n**This bot is Maintained and Developed by Team qwed** 👑\n**Use it only for Educational Purposes**, We are not responsible of any illegal things Performed by you.\n     ❛ ━━━━･━━━━･━━━━ ❜")
     except Exception as e:
         print(e)
 
@@ -498,7 +498,7 @@ async def report(event):
         await event.respond("⚠ 𝗪𝗿𝗼𝗻𝗴 𝗰𝗼𝗺𝗺𝗮𝗻𝗱 𝗳𝗼𝗿𝗺𝗮𝘁!\n𝗨𝘀𝗲 `/bh instagram.com` 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 `https://`", reply_to=event)
         return            
     if credit_value <= 0:
-        await event.respond('**Credits Finished! Try /refresh** or \nBuy 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 for Unlimited usage 👑.\n𝗦𝗵𝗼𝗽 ➜ [BlackHeads](https://blackheads.mysellix.io/product/gateway-v2)',reply_to=event, parse_mode='MarkdownV2')
+        await event.respond('**Credits Finished! Try /refresh** or \nBuy 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 for Unlimited usage 👑.\n𝗦𝗵𝗼𝗽 ➜ [qwed](https://t.me/SIDHU_GARRY)',reply_to=event, parse_mode='MarkdownV2')
     else:
                 global edit
                 edit = await event.respond('𝗬𝗼𝘂𝗿 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗶𝘀 𝗶𝗻 𝗣𝗿𝗼𝗴𝗿𝗲𝘀𝘀...', reply_to=event)
@@ -536,20 +536,20 @@ async def report_step(event):
                 if "Error" in payment_gateways:
                     await event.edit("Provide Valid URL, or Maybe Site issue :)")
                 elif "Unknown" in payment_gateways:
-                    ch_name = '『ᏰᏂ』'
-                    ch_id = 'blackheadsop'
+                    ch_name = '『qwed』'
+                    ch_id = 'qwedop'
                     ch = f"[{ch_name}](https://t.me/{ch_id})"
                     end_time = time.time()
                     time_taken = end_time - start_time
                     rounded_time_taken = round(time_taken, 2)
-                    await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ unknown\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaylookupv2bot)\n❝ ━━━━・{ch}・━━━━ ❞""")
+                    await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ unknown\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaychkrBot)\n❝ ━━━━・{ch}・━━━━ ❞""")
                 else:
                     us_id = event.sender.id
                     if event.sender.id in pre:
                         user = event.sender
                         checked = f"[{user.first_name}](tg://user?id={user.id})"
-                        ch_name = '『ᏰᏂ』'
-                        ch_id = 'blackheadsop'
+                        ch_name = '『qwed』'
+                        ch_id = 'qwedop'
                         ch = f"[{ch_name}](https://t.me/{ch_id})"
                         end_time = time.time()
                         time_taken = end_time - start_time
@@ -560,7 +560,7 @@ async def report_step(event):
                                 await edit.edit("⚠️ You are sending messages too quickly. Please wait a moment before sending another message.\n📛 𝗧𝗶𝗺𝗲𝗼𝘂𝘁 : `3s`")
                                 message_counts[user_id] = 0
                         else:
-                            msg=await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝗣𝗿𝗲𝗺𝗶𝘂𝗺]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaylookupv2bot)\n❝ ━━━━・{ch}・━━━━ ❞""")
+                            msg=await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝗣𝗿𝗲𝗺𝗶𝘂𝗺]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaychkrBot)\n❝ ━━━━・{ch}・━━━━ ❞""")
                             await client.send_message(LOG_GROUP_ID,msg)
                             user_id = event.sender.id
                             # Inside the block where you deduct credits
@@ -572,13 +572,13 @@ async def report_step(event):
                     elif event.sender.id in vip:
                         user = event.sender
                         checked = f"[{user.first_name}](tg://user?id={user.id})" if user.username else user.first_name
-                        ch_name = '『ᏰᏂ』'
-                        ch_id = 'blackheadsop'
+                        ch_name = '『qwed』'
+                        ch_id = 'qwedop'
                         ch = f"[{ch_name}](https://t.me/{ch_id})"
                         end_time = time.time()
                         time_taken = end_time - start_time
                         rounded_time_taken = round(time_taken, 2)
-                        msg=await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝐕𝗜𝗣 👑]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaylookupv2bot)\n❝ ━━━━・{ch}・━━━━ ❞""")
+                        msg=await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝐕𝗜𝗣 👑]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaychkrBot)\n❝ ━━━━・{ch}・━━━━ ❞""")
                         await client.send_message(LOG_GROUP_ID,msg)
                 
                 
@@ -588,12 +588,12 @@ async def report_step(event):
                         
                         
                         if credit ==0:
-                            await event.respond('**Credits Finished! Try /refresh** or \nBuy 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 for Unlimited usage 👑.\n𝗦𝗵𝗼𝗽 ➜ [BlackHeads](https://blackheads.mysellix.io/product/gateway-v2)', reply_to=event)
+                            await event.respond('**Credits Finished! Try /refresh** or \nBuy 𝗣𝗿𝗲𝗺𝗶𝘂𝗺 for Unlimited usage 👑.\n𝗦𝗵𝗼𝗽 ➜ [qwed](https://t.me/SIDHU_GARRY)', reply_to=event)
                         else:
                             user = event.sender
                             checked = f"[{user.first_name}](tg://user?id={user.id})" if user.username else user.first_name
-                            ch_name = '『ᏰᏂ』'
-                            ch_id = '-1002017038709'
+                            ch_name = '『BQ』'
+                            ch_id = '-10020170k8709'
                             ch = f"[{ch_name}](tg://user?id={ch_id})"
                             user_id = event.sender.id
                             current_time = datetime.now()
@@ -610,7 +610,7 @@ async def report_step(event):
                                 last_message_time[user_id] = current_time
                                 time_taken = end_time - start_time
                                 rounded_time_taken = round(time_taken, 2)
-                                msg = await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝗙𝗿𝗲𝗲]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaylookupv2bot)\n❝ ━━━━・{ch}・━━━━ ❞""")
+                                msg = await edit.edit(f""" ┏━━━━━━━⍟\n┃ 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻 𝗳𝗲𝘁𝗰𝗵𝗲𝗱 ✅\n┗━━━━━━━━━━━━⊛\n 𝗦𝗶𝘁𝗲 -» `{domain}`\n• 𝗚𝗮𝘁𝗲𝘄𝗮𝘆𝘀 ➜ {', '.join(payment_gateways)}\n• 𝗦𝗲𝗰𝘂𝗿𝗶𝘁𝘆 ➜ Captcha : {'✅' if captcha else '⛔'}\n        Cloudflare : {'✅' if cloudflare else '⛔'}\n━━━━━━━━━━━━━━━\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐓𝐢𝐦𝐞 𝐓𝐚𝐤𝐞𝐧 : `{rounded_time_taken}``s`\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝗖𝗵𝗲𝗰𝗸𝗲𝗱 𝗯𝘆 {checked} [𝗙𝗿𝗲𝗲]\n[◈](https://i.ibb.co/CMcdMjf/Blue-Tosca-Geometric-Technology-Linkedln-Banner.png) 𝐁𝐨𝐭 [𝗚𝗮𝘁𝗲𝘄𝗮𝘆 𝗟𝗼𝗼𝗸𝘂𝗽V2](https://t.me/gatewaychkrBot)\n❝ ━━━━・{ch}・━━━━ ❞""")
                                 await client.send_message(LOG_GROUP_ID,msg)
                                 user_id = event.sender.id
                             # Inside the block where you deduct credits
