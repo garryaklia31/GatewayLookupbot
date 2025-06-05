@@ -14,9 +14,9 @@ import urllib.parse
 from bs4 import BeautifulSoup
 from collections import defaultdict
 from datetime import datetime, timedelta
-api_id = 'API_ID_HERE' # Keep this as it is 
-api_hash = 'API_HASH_HERE' # same heree
-client_token = 'BOT_TOKEN_HERE'
+api_id = '28386099' # Keep this as it is 
+api_hash = 'a0057fbf1ca49ce5e9d26fd4afd6e78b' # same heree
+client_token = '8063730137:AAGKMfx-Kk7JU6jU_6R43_3E15YojwD3zTs'
 
 #coded by @AnukarOP 
 
