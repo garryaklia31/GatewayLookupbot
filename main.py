@@ -20,7 +20,7 @@ client_token = '8063730137:AAGKMfx-Kk7JU6jU_6R43_3E15YojwD3zTs'
 
 #coded by @AnukarOP 
 
-admin_ids = [1718738592, ADMIN_ID_2, ADMIN_ID_3]  # Example admin IDs
+admin_ids = [1718738592, 8039075749]  # Example admin IDs
 
 def is_user_admin(user_id):
     return user_id in admin_ids
