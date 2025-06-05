@@ -35,7 +35,7 @@ credits = {}
 global credit
 credit = {}
 generated_codes = []
-vip = [VIP_ID_1,VIP_ID_2,VIP_ID_3]
+vip = [8039075749,1718738592]
 def normalize_url(url):
     parsed_url = urllib.parse.urlparse(url)
     normalized_url = f"{parsed_url.scheme}://{parsed_url.netloc}"
