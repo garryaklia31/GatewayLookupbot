@@ -1,0 +1,9 @@
+telebot
+httpx
+aiohttp
+aiogram
+tgcrypto
+requests
+bs4
+timedelta
+telethon
